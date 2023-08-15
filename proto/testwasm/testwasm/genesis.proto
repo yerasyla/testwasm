@@ -1,0 +1,12 @@
+syntax = "proto3";
+package testwasm.testwasm;
+
+import "gogoproto/gogo.proto";
+import "testwasm/testwasm/params.proto";
+
+option go_package = "testWasm/x/testwasm/types";
+
+// GenesisState defines the testwasm module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
